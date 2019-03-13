@@ -1,4 +1,4 @@
-social-media-clone
+# social-media-clone
 A social media clone designed as a part of Django course
 
 Technology used : 
@@ -8,7 +8,7 @@ Technology used :
 Other dependencies : 
 -> Bootstrap v4.1.3 
 -> Django v2.1.7
--> Django-braces #latest
+-> Django-braces *latest
 -> Misaka v2.1.0
 -> Font Awesome v5.7.2
 
