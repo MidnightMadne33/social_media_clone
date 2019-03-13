@@ -1,0 +1,22 @@
+<div class="">
+  <div class="">
+    <h5 class="text-primary">
+      <a href="{% url 'posts:for_user' username=post.user.username %}">
+        @{{ post.user.username }}
+      </a>
+    </h5>
+    <time>
+      <a href="{% url 'posts:single' username=post.user.username pk=post.pk %}">{{ post.created_at }}</a>
+    </time>
+
+  </div>
+  <p>{{ post.message_html|safe }}</p>
+  <div class="float-right">
+    {% if user.is_authenticated and post.user == user %}
+    <a class="btn btn-danger" href="{% url 'posts:delete' pk=post.pk %}">
+      <span class="fas fa-trash-alt" aria-hidden='true'></span>
+      Delete
+    </a>
+    {% endif %}
+  </div>
+</div>

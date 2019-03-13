@@ -1,0 +1,11 @@
+{% extends 'posts/post_base.html' %}
+
+{% block post_content %}
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      {% include "posts/_post.html" %}
+    </div>
+  </div>
+</div>
+{% endblock %}

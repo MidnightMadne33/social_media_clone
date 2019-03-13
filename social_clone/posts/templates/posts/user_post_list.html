@@ -1,0 +1,17 @@
+{% extends 'posts/post_base.html' %}
+
+{% block post_content %}
+<div class="jumbotron my-5">
+  <h1 class="text-success">@{{post_user.username}}</h1>
+</div>
+
+<div class="container">
+  {% for post in post_list %}
+  <div class="card my-2">
+    <div class="card-body">
+      {% include "posts/_post.html" %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

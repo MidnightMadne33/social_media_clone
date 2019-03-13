@@ -1,0 +1,52 @@
+body {
+  background: black;
+}
+
+.mynav, .jumbotron {
+  background: #020423;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.help-block, label, .form-text {
+  display: none;
+}
+
+.form-control {
+  border: 1px solid #28a745;
+}
+
+.card-group {
+  background: #003459;
+}
+
+.card-group:hover {
+  background: #022B47;
+}
+
+.card-group a {
+  color:white;
+}
+
+.card-group a:hover {
+  text-decoration: none;
+}
+
+.empty-warning {
+  margin-top: 20%;
+  color: #0CA499;
+  text-align: center;
+}
+
+.card-post {
+  /* padding: 10px; */
+  height: 200px;
+  overflow: scroll;
+}
+
+.card-delete {
+  height: 200px;
+  overflow: hidden;
+}

@@ -1,0 +1,46 @@
+{% extends 'groups/group_base.html' %}
+
+{% block group_content %}
+
+  <div class="jumbotron text-success">
+    <h1>{{ group.name }}</h1>
+    <h5>Member count <span class="badge badge-light">{{ group.members.count }}</span></h5>
+
+    <div class="float-right">
+        {% if user in group.members.all %}
+
+        <a class="btn btn-warning" href="{% url 'groups:leave' slug=group.slug %}">
+          <span class="fas fa-sign-out-alt"></span> Leave
+        </a>
+
+        {% else %}
+
+        <a class="btn btn-success" href="{% url 'groups:join' slug=group.slug %}">
+          <span class="fas fa-sign-in-alt"></span> Join
+        </a>
+
+        {% endif %}
+    </div>
+
+  </div>
+
+
+
+  <div class="">
+    {% if group.posts.count == 0 %}
+    <div class="empty-warning">
+      <h2>No posts in this group yet!</h2>
+    </div>
+    {% else %}
+      {% for post in group.posts.all %}
+      <div class="card card-post">
+        <div class="card-body">
+          {% include "posts/_post.html" %}
+        </div>
+      </div>
+      {% endfor %}
+    {% endif %}
+
+  </div>
+
+{% endblock %}
