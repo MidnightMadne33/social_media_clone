@@ -2,8 +2,8 @@
 A social media clone designed as a part of Django course
 
 Technology used : 
--> HTML5 
--> CSS
+ HTML5   
+ CSS
 
 Other dependencies : 
 -> Bootstrap v4.1.3 
